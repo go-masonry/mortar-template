@@ -4,11 +4,11 @@ go 1.15
 
 require (
 	github.com/alecthomas/kong v0.2.12
-	github.com/go-masonry/bjaeger v0.2.1
-	github.com/go-masonry/bprometheus v0.2.1
-	github.com/go-masonry/bviper v0.2.1
-	github.com/go-masonry/bzerolog v0.2.1
-	github.com/go-masonry/mortar v0.2.1
+	github.com/go-masonry/bjaeger v1.0.1
+	github.com/go-masonry/bprometheus v1.0.1
+	github.com/go-masonry/bviper v1.0.1
+	github.com/go-masonry/bzerolog v1.0.1
+	github.com/go-masonry/mortar v1.0.1
 	github.com/golang/protobuf v1.4.3
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.1.0
 	github.com/mitchellh/mapstructure v1.4.1 // indirect

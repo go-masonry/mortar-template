@@ -62,3 +62,10 @@ Constructors, options and everything else can be found in [logger.go](logger.go)
 This template is using the [viper](https://github.com/spf13/viper) library.
 
 Constructors, options and everything else can be found in [config.go](config.go).
+
+## Authentication
+
+This template doesn't enforce any Authentication. However there is a sample code showing how you can parse a JWT if found.
+Default usage can be found in [`../validations/auth.go`](../validations/auth.go)
+
+Constructors, options and everything else can be found in [auth.go](auth.go).

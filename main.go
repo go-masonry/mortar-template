@@ -34,6 +34,7 @@ func createApplication(configFilePath string, additionalFiles []string) *fx.App 
 		mortar.PrometheusFxOption(),                              // Prometheus
 		mortar.HttpClientFxOptions(),
 		mortar.HttpServerFxOptions(),
+		mortar.AuthFxOptions(),
 		mortar.InternalHttpHandlersFxOptions(),
 		// Tutorial service dependencies
 		mortar.ServiceAPIsAndOtherDependenciesFxOption(), // register tutorial APIs
