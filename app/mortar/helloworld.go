@@ -9,6 +9,7 @@ import (
 	"github.com/go-masonry/mortar-template/app/validations"
 	serverInt "github.com/go-masonry/mortar/interfaces/http/server"
 	"github.com/go-masonry/mortar/providers/groups"
+	"google.golang.org/grpc/credentials/insecure"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"go.uber.org/fx"
@@ -50,7 +51,7 @@ func serviceGRPCGatewayHandlers() []serverInt.GRPCGatewayGeneratedHandlers {
 	return []serverInt.GRPCGatewayGeneratedHandlers{
 		// Register service REST API
 		func(mux *runtime.ServeMux, localhostEndpoint string) error {
-			return helloworld.RegisterGreeterHandlerFromEndpoint(context.Background(), mux, localhostEndpoint, []grpc.DialOption{grpc.WithInsecure()})
+			return helloworld.RegisterGreeterHandlerFromEndpoint(context.Background(), mux, localhostEndpoint, []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())})
 		},
 		// Any additional gRPC gateway registrations should be called here
 	}
